@@ -1,0 +1,260 @@
+DWH PROFESSIONAL FUNDAS:
+
+Data: 
+	Anything you are able to store.
+	Raw artifact from business or non business.
+
+Data Availability Types
+
+a) Structured Data : OLTP applications data
+b) Semi-Structured Data : Logs, Journals, Event Hubs etc...
+c) Unstructured Data:Social media data (facebook, twitter, gmail etc...) and documents data(word, pdf etc...)
+
+Data Stoage availability
+
+a) File System storage--Data in the form of files [Preferred for few structured, and more semi and unstructured data]
+
+b) Database storage--Data in the form of databases [Structured data storage]
+
+Datawarehouse
+--Huge data storage area
+
+Huge data storage areas
+
+a) Structured data storage--Datawarehouse [ Teradata, Oracle, Sql Server etc...]
+
+b) Blob storage --Azure [more volumes of data such as files, images, videos etc...]
+
+c) Data Lake --Azure [Structured, Semi Structured, and Unstructured Storage area]
+
+
+Differences between OLTP Systems and OLAP Systems
+
+BI Process
+
+GENERAL PUBLIC-->OLTP-->ODS-->STAGE-->DWH-->CUBES-->REPORTING--> DECISION MAKING PEOPLE
+                              (250)   (250)    (190)       45   Tables
+
+OLTP: Current data or fresh or "real time" data storage area
+ODS: Operational Data Store 
+         Which stores "near real-time data "
+         Ex: Daily 3 times loading data from OLTP to intermediate ODS.
+      
+        ODS acts like input to DW, so that no burden on OLTP systems.
+
+Stage: One more intermediate area to store and perform operations [ transformations and partly incremental data load]
+
+DWH: Huge "incremental data" storage area
+
+
+
+DWH principles or characterstics
+
+ --Many scientists, Authors, Practioneries and others defined many principles.
+-- Bill Inmon principles [ Father of Data Warehouse]
+
+    a) Subject Oriented Data [Savings, Current, DMAT etc...]
+    b) Integrated data [Ensuring common standard of data Ex: common currency, common naming convention etc...]
+    c) Time varient [data based on time frames, so that "current understanding", "past analysis", and "future prediction" is easier]
+    d) Non-Volatile [No change of data, so that history you can maintain
+
+Note: Time varient require proper granularity
+
+Granularity:
+
+The level of detailed data storing in the warehouse.
+
+Ex: Day wise, week wise, month wise etc...
+
+Trainer's company: 
+
+DWH has multiple tables and multiple grains, but low grain is day.
+
+If you store data in day wise: Day, week, month, quarter etc... analysis is easier.
+
+Life cycle:
+
+Each project require life cycle. Our DWH project has multiple layers and tools, so multiple life cycles used.
+Steps remain same.
+
+1.Requirements gathering
+2. Analysis
+3. Design
+4. Coding
+5. Testing
+6. Implementation or Deployment
+7. Maintenance or Support [ SLA--Service Level Agreement]
+
+a) ETL life cycle 
+b) Semantic life cycle
+c) Reporting life cycle
+
+OLAP:
+
+Online analytical processing
+
+Many types of OLAP available.
+
+a) ROLAP: Relational OLAP
+	 Data and aggregates in relational format.
+
+b) MOLAP: Multidimensional OLAP
+
+	Data and aggregates in multidimensional format [ in cubes]
+
+c) HOLAP : Hybrid OLAP
+	
+	Data in relational format and aggregates in multidimensional format [in cubes]
+	
+d) DOLAP : Desktop OLAP
+	Data and aggregates in desktop applications
+	Analysing in the excel or lotus etc.. desktop applications
+
+
+Data Mart:
+
+Data specific subject area / functionality area / task area.
+
+Ex: Current account processing is a subject area / data mart area
+
+May be depend on ware house or independent from ware house.
+
+It is of two major types
+
+a) Dependent Data Mart:
+
+	First warehouse created and the data marts defined from ware house.
+	Simply, data mart is subset of datawarehouse.
+
+b) Independent Data Mart:
+
+	From oltp / transactional systems, we construct data marts directly.
+	Simply, data mart is independent from the ware house.
+
+
+DWH approaches:
+
+Each project contains one life cycle (Ex: Agile ) and one approach.
+
+a) KIMBALL approach: Data marts created and then ware house generated. [ Bottom Up approach]
+b) INMON approach: Datawarehouse created and then data marts generated. [ Top Down approach]
+
+Note: Most of the projects using KIMBAL approach because of cost, resource and process effectiveness.
+
+
+Hierarchy:
+
+Contain multiple levels and members.
+Minimum two levels required.
+
+Date hierarchy: 
+
+Centuary--> Decade-->Quadyear-->Year-->Semister-->Quarter-->Month-->Fortnight-->Week-->Day
+
+Time Hierarchy:
+
+Hour--> Minutes-->Seconds-->MilliSeconds
+
+
+
+What exactly a DWH project require for better decision support?
+
+a) DWH Principles [Bill Inmon]
+b) DWH Approach [KIMBALL]
+c) One Life Cycle [Agile methodology]
+
+Note: 
+Agile methodology [Agile SDLC]
+--Agility means changing [ quick and fast]
+--Team members [5-8]
+--Work in the form of sprints [ 1 week- 6 weeks sprint]
+--Cross functional teams 
+  [Here you will gather requirements, analyze it, design it, code it, test it and publish it]
+--Meetings [ Daily scrum meeting for 15 minutes { standup meeting}]
+--Team contain Scrum member, Scrum Master, Hive, Pig, Chicken etc... roles...
+
+
+
+
+
+
+
+
+
+========================================================================
+
+Data Modelling Fundas
+
+Assume you have identified a proper DWH approach, Life Cycle, and Principles.
+The left over is Model for the ware house.
+
+Most of the projects using Dimensional Modeling with the below dimensional model schemas
+a) Star Schema
+b) Snow flake schema
+c) Hybrid schema
+d) Galaxy Schema / Fact Constellation Schema
+
+Schema: Relationship between dimension and fact tables.
+
+Dimension Table: Textual table, contains only textual information..
+Ex: Student dimension table contain students data
+     Location dimension table contains location data
+   etc...
+
+Fact table: Contains dimension references followed by business measures.
+Ex: Student, location and their tution fee {business measure}.
+
+Star Schema:
+
+Fact table surrounded by dimensions
+
+Snow flake schema:
+
+Fact table surrounded by dimensions and dimensions having sub dimensions {dimensional hierarchy}.
+
+Mixed Schema:
+
+Star + Snow flake
+
+
+Galaxy schema:  
+
+Multiple fact tables sharing common dimension tables and appear like galaxy.
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

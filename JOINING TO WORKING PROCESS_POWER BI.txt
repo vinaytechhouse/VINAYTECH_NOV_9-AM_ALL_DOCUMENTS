@@ -1,0 +1,270 @@
+﻿This document contains real-time understanding, useful for freshers and experienced.
+=======================================================================================
+Between Offer Letter and Project Assignment
+=======================================================================================
+You got offer in a company
+
+a) On joining date
+	1.Joining formalities [they will verify and take your documents (experience, academic or any other)]
+	
+	2.Few companies give you appointment order after formalities, few comapnies put some notice period / probation ti  make permanent employee.
+
+If you join in MNC
+
+a) You will be redirected to HR team (TCS,Wipro) / Management Team (IBM, Accenture).
+b)     This team will look for a project to you and ask you to face interviews [project interviews /client inerviews]
+    
+ c) These interviews are nominal, to ensure you have awareness and suitable for the project
+d) After selecting you will joining in a project where multiple types of resources available
+
+	Data Modeler / Designer / Architect
+	Scrum Master
+	
+	Power BI Developer
+	Power BI Admin
+	Power BI Tester
+
+	Note: Based on the model [On-site and Off-Shore, team will sit and operate]
+=======================================================================================
+	In MNCs projects follow a process
+
+	a) One Life Cycle : SDLC: Agile methodology [ scrum implementation]
+		Sprint approach
+
+		To deliver quick and fast solutions
+
+		a)Less team (5-8) members
+		b) Cross functional team (requriments, analysis, design, code, test, implementation)
+		c) Sprint may be from one week to 8 maximum weeks
+
+	b) One DWH Approach: KIMBALL approach: Bottom-up approach
+	c) One scheduling tool [In Power BI we use subscriptions, Power Automate / Microsoft flow no third party schedulers]
+	d) One versioning tool [ TFS (Team Foundation Server), GitHub, Sharepoint Server, PVCS, VCS etc.]
+	
+=======================================================================================		 
+If you join in Normal / Medium level organizations
+
+	a)You will be directly moved to project.
+	b) You may need to participate end to end operations
+	c)You may need to learn new things or technologies
+	
+	You will learn work, but professionalism and growth is less.
+	
+	Note: You may not a great process [few companies following processes]
+
+=======================================================================================
+Power BI Project Environments
+=======================================================================================
+a) Development : Power BI Developers: 
+
+	Create report + Unit testing [white box testing / code testing]
+
+b) Test Environment: Power BI Testers / Quality Analysts: 
+
+	Perform functional testing [black box testing / business functionality test]
+
+c) UAT [User acceptance testing]
+
+	Actual users will test 
+
+d) Live / Production environment : Reports / Dashboard scheduled: 
+
+	Power BI Support Team [production support]
+
+Trainer experience:
+-----------------------------------------------------------
+Company 1:
+
+We have multiple workspaces in a Premium Account for different environments.
+
+One workspace for development
+
+One workspace for Test environment
+
+One workspace for Prod environment
+
+
+Workspaces are given access to required people.
+Ex:
+
+Development team and users to the development workspace
+
+
+-----------------------------------------------------------------
+Comapany 2:
+
+Multiple accounts for multiple envirnments
+
+a) Development account
+
+b) Test account
+
+c) Prod account [scheduled]
+
+
+
+=========================================================================================
+Power BI Developer Responsibilities in One Project
+=========================================================================================
+
+1.This project is in Agile methodology with sprint implementation in the development.
+2.Closely worked with the customer in getting relevant documents [Business and Report Technical Design] from share point portal,    Analyzing, requesting for clarification, and working on.
+ 3.   Retrieve data {specially excel} from one drive, and Azure SQL databases.
+ 4.    Performed data changes suitable for better modeling and visualizations.
+ 5.  Created many DAX measures, calculated columns to implement date, time, statistical, and mathematical operations to show on the visuals.
+6. Created book marks, drill down, drill through, and button actions on the reports
+7. Used various filters {Report, Page, Visual, Drill through}, Slicers {List, Range, Drop Down}, 
+8. Worked on Single item visuals {KPI, Gauges, and Cards} and Multi Item Visuals {table, matrix, Multirowcard etc…}
+9. Displayed analytical and trend data using various charts and maps
+10. Provided row level security {RLS } to restrict data access
+11.Tested the report against database { with sql}, excel {excel formulas} etc…
+12. Published to PBI service
+13.  Created workspaces and appspaces(new app apces) in the recent times by moving from content packs
+  
+14.Created dashboard using report tiles, books marks, and other actions.
+15. Specified users to access reports at data set row level security
+16. Specified Scheduled refresh for the report based on customer instructions
+17.Shared and Subscribed the the reports, dashboards ad per customer requirement.
+18. Generated alerts when customer required point reached.
+19. We answered for the customer’s reviews and notifications.
+
+
+=========================================================================================
+Power BI Admin Responsibilities in One Project  [usually in very large organzations]
+=========================================================================================
+Experience in Power BI Administration portal and performed below tasks
+o Managing workspaces
+o Publish Reports and dashboards
+o Monitoring and troubleshooting data connection and data refresh
+o User administration like Create and manage users and groups, assigning roles
+o Enable and disable Power BI features
+o Report on usage and performance
+o Review and manage auditing
+o Manage workloads
+o Performance issue analysis and fix
+o Manage Power BI connections like gateway's to on-premise Database and connectors
+o Manage subscriptions
+Exposure to databases such as SQL Server/SQL DWH
+Assist in designing and development of technical architecture and requirements
+
+
+=========================================================================================
+Power BI Support Responsibilities in One Project
+=========================================================================================
+a) They work in one support tool( Servicenow, Assure Service Desk), where they find production issues (live system / report issues)
+b) The issues are entered by the customer team in to  the tool 
+c) The issues may be incidents (one time occured) or problem tickets (frequently occured issue raised as problem for detailed diagnosis)     or performance issues
+
+  Ex: Incidents
+
+	a) Report data invalid
+	b) Report is not showing Mum data
+	c) The total of the value seems wrong
+	
+	d) Connection issues [ report is not able to connect to cube]
+	
+    Problem Tickets
+
+	a) Repeatedly the report showing wrong data value "Jisper"
+	b) Repeatedly report disconnecting in middle
+
+  Performance issues
+
+	a) Power BI Report running longer time
+	b) Report halted and not showing any data
+	c) Report occupying more memory
+	d) Report using many system resources
+
+d) There are multiple production levels [L1 (high), L2, L3, L4 (low)], and the severity  in each level is P1(high: 2-4 hrs), p2 (8-10 hrs), P3, P4 (low)
+	L1 incidents: P1,P2,P3,P4
+	L2 Incidents: P1,P2,P3,P4
+	L3 Incidents: P1,P2,P3,P4
+	L4 Incidents: P1,P2,P3,P4
+
+ 
+ Resolution:
+
+a) Verify at report level the issue or going to Audit or Log files, monitor the issue area
+b) Implement the change at near production (UAT / Integration etc.), test it, peer review it and go for approvals
+c) Implement the change at production.
+=======================================================================================
+How do we get the documents in realtime?
+
+a) Web Portal [Sharepoint, GitHub, TFS etc..]
+b) Email 
+c) Shared Folder
+------------------------------------------------------------------------------------------
+What kind of documents you will get?
+
+a) Business Understanding document
+b) Report Design Doc 
+c) Technical Design Document
+d) Data Model Document
+etc..
+----------------------------------------------------------------------------------------
+How do we deliver?
+
+a) Web Portal [Sharepoint, GitHub, TFS etc..] and version maintenance
+b) Email 
+c) Shared Folder
+
+=======================================================================================
+Project 1 culture:
+=================
+
+Practice Time: Minimum 20 hours
+
+Pre-requisite: Page Settings, Formations, BookMarts, Drilldown, Drill Through, Actions, Themes, Visuals, RLS, DAX good knowledge, Power BI Service
+
+Developer Design: Creating a multi page report  which is controlled by single page dashboard
+
+Total Duration : 6 months project [design, development, and testing]
+
+Day-Day responsibilities:
+	In this project working with the pending tasks.
+
+Project begining time: We will get docs, work on docs...
+
+Meetings will be there:
+
+a) Kick off meeting: Project Initiation meeting: Here development team introduced to customer team [other technical team]
+
+b) Daily Scrum meeting: 
+	a) Standup meeting
+	b) Daily 15 mins
+	    How far we reached, and pending things
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
