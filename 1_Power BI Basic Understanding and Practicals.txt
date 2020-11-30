@@ -1,0 +1,431 @@
+========================================================================================
+Power BI Version, Releases and Position
+========================================================================================
+What is the position of Power BI in the current IT?
+
+Gartner Rating:
+
+https://info.microsoft.com/ww-landing-gartner-mq-bi-analytics-2019.html?LCID=EN-US
+
+Forrester Wave Rating:
+
+https://info.microsoft.com/ww-landing-Forrester-Wave-Enterprise-BI-platforms-website.html? LCID=EN-US
+
+
+Power BI Releases:
+
+We have month update in Power BI. We don't have version and release kind of stuff.
+
+In the month update, we will find  a) New features b) Upcoming features c) Depecations to old features d) Removal of old features
+
+ https://powerbi.microsoft.com/en-us/blog/power-bi-desktop-may-2018-feature-summary/
+
+POWER BI Main Web Site:
+
+                https://powerbi.microsoft.com/en-us
+
+Power BI Desktop:
+
+               https://powerbi.microsoft.com/en-us/desktop
+
+Power BI Report Server Desktop:
+
+               https://powerbi.microsoft.com/en-us/report-server
+
+Power BI Cloud Service:
+
+https://app.powerbi.com
+
+Power BI Developer:
+
+https://powerbi.microsoft.com/en-us/developers
+
+Microsoft Flow:
+
+https://flow.microsoft.com
+
+Power Apps:
+
+https://make.powerapps.com
+
+========================================================================================
+Power BI Learning [Simple / Medium / Complex]
+========================================================================================
+Very simple to learn
+
+Full GUI
+
+Only the little complexity at the time of DAX [ Data Analysis Expressions]. DAX has set of functions similar to excel and we need it during
+calculations and modeling.
+
+No coding
+
+In real time you may work with any source [ Excel, Flat file, XML file, Json File, Relational Databases (Oracle, SQL Server, Teradata), 
+Data warehouses, Cubes, Cloud Applications, File Streams etc...]
+
+But you need to have little understanding about SQL [around 8 topics] for better kick off.
+
+We will take 3-4 hours SQL.
+
+========================================================================================
+Power BI Components
+========================================================================================
+Power BI Components
+
+Cloud Operations [95% companies using]
+
+a) Power BI Cloud Desktop [Power Query, Power Pivot, Power View] : Non Paginated Reports
+b) Power BI Cloud Service [app.powerbi.com]
+
+On-Premises operation [ 5%...increasing now]
+
+c) Power BI Report Server Desktop [exclusive]
+d) Power BI Report Server [exclusive]
+
+Actionable component [Required]
+
+e) Power Automate [exclusive] / Microsoft Flow
+
+User friendly [ through mobile / tab customers access, add reviews, add data etc.]
+
+f) Power APPs
+
+Additional components
+
+f) Microsoft Cubes [exclusive]
+g) REST Understanding [exclusive]
+h) Power BI Report Builder [exclusive]
+
+	Paginated Report: Each page having certain number of records / certain category records 
+=======================================================================================
+Initial Understanding Of Power Platform [ Connect to each URL with the given email and pasword]
+=======================================================================================
+POWER BI Main Web Site: 
+
+		To understand what type of highlights available in Power BI from Microsoft [documentation and video]. Why Power BI?
+
+                https://powerbi.microsoft.com/en-us
+
+Power BI Desktop Download [Cloud]: 
+
+		This is the component required to create report [Get Data, Transform Data, Model Data, Visualize, Secure Data, "Publish" Report]
+
+               https://powerbi.microsoft.com/en-us/desktop
+
+Power BI Report Server Desktop Download [On-Premise]:
+
+		This is the component required to create report [Get Data, Transform Data, Model Data, Visualize, Secure Data, "Save" Report]
+
+               https://powerbi.microsoft.com/en-us/report-server
+
+Power BI Cloud Service [Power BI Service]:
+
+		Reports / Dashboards Management Service [sharing, subscribe, alert, refresh, create, data flow, and many]
+
+		https://app.powerbi.com
+
+Power BI Developer:
+
+		To register apps and to create app ids to work with different applications.
+
+		https://powerbi.microsoft.com/en-us/developers
+
+Microsoft Flow:
+
+		It perform automate operations [schedulig and actions]. This can also be called as Power Automate.
+
+		https://flow.microsoft.com
+		
+		Example:
+		
+		a) You want an important email indication information in your mobile message.
+		
+		b) You want to refresh power bi dataset, send an email, call app resources for little management, send an email,
+			trigger an SSIS package, send an email etc.
+			
+			Series of operations I would like to schedule, then go for Power Automate.
+
+Power Apps:
+
+		User Friendly Mobile APPs creation with Low Code [ no need to write huge coding like .net, java, php, python etc.].
+
+		https://make.powerapps.com
+
+Which components we use frequently in real-time?
+
+a) Power BI Desktop
+
+	Create report by implementing Querying, Pivoting, Modeling, Viewing etc. operations
+
+	Get Data--> Transform Data--> Model Data--> Present Data--> Security--> Publish / Save to Server / Service
+
+	OS: windows 7 or above 
+	RAM: 2 GB recommended
+	Processor: 1.5 GHz recommended
+	Display Size: 1300 * 1200 [better visualization of report]
+
+	Software download: Google it and download [even in the real-time]
+	Size: 300 MB
+	Install: Setup.exe-->Next->Next->Finish
+	Post installation: Desktop icon [verify]
+
+
+b) Power BI Service
+
+	Cloud Service, where reports stored and managed [ very powerful management].
+	We access through URL [app.powerbi.com] with an account [Free, Pro, Premium]
+	Store reports
+	This will manage the reports [ Share, Subscribing, Alerting, Refresh Reports etc.
+
+
+Nextflix, HotStar, Prime..accounts
+Streaming applications [cloud]
+
+a) Individual account: Less amount
+b) Group account: Accessable in multiple devices [mobile, tab, TV ad many other] charge diff
+
+What is account?
+
+It is the authentication to work with web / stream / cloud applications.
+
+Power BI Accounts:
+
+a) Free Account:
+		With college ID, UniversityID, or companyID we can create.
+		This is helpful to create reports and publish.
+		No report management
+b) Pro account:
+		Only one user, 10 GB storage, $10 / month
+		Less resources, less data, less reports
+
+		Small and medium organizations using more and more
+		
+c) Premium account: [Capacity pricing account: Based on the capacity, the price will be] : Mostly corporate companies
+
+		P1
+			8 core,25 GB RAM, TB, multiple users, multiple reports, $5000 / month
+
+		P2
+			16 core,50 GB RAM, TB, multiple users, multiple reports, $10000 / month
+
+
+		P3
+
+			32 core,100 GB RAM, TB-PB, multiple users, multiple reports, $20000 / month
+
+
+Note: Institute will give you a pro account for operations
+
+
+Which account your current organization is using?
+
+My orgnization using multiple pro accounts (7) and two P1 accounts and 1 P2 account.
+
+One practical:
+
+I took one flat file and one excel, retrieved data using PBI Desktop, Modeled data, reported data, published report.
+Open PBI Services, viewed it and shared / subscribed it.
+
+======================================================================================
+PDF 1 : Topics
+
+Demo Conclusion 
+Power BI Desktop Understanding
+Accounts [Free, Pro, Premium]
+Power Bi Account Creation
+Power BI Data Modes[Load, Import, Direct Query, Connect Live]
+=======================================================================================
+PDF 3:
+
+Power BI Initial Practicals [ Retrieving data from multiple data feeds]
+
+a) Explaining PBI Desktop Interface
+
+b) Retrieving data from multiple sources [flatfile, excel, relational table, cube tables, web url, json, Azure SQL db etc.]
+	
+
+Working on multiple input feeds
+
+1. Retrieving from web [completed]
+2. Retrieve from Excel [completed]
+3. Retrieve from flat file [ completed]
+4. Retrieve from JSON file [completed]
+		Java Structured Object Notation File
+		Semi structured file
+		Contains attributes and values [properties and values]
+		
+		To get data from this little more care is required.
+
+5. Create own query dynamically [completed]
+6. Create a query using Blank Query option [completed]
+
+7. Retrieval from Table 
+8. Retrieval from view
+9. Retrieval from procedure
+10. Retrieval from cube
+11. Retrieval from Azure SQL database
+12. Retreival of files data from a folder [set of files combining and loading]
+
+etc.
+
+
+
+
+Power BI Service
+------------------
+Workspace: Working area where we keep dashboards, reports, workbooks, datasets, and data flows.
+
+APPSpace: Required reports, dashboards, workbooks sharing area.
+	This is accessable through mobile / web / desktop.
+
+Objective: Create a workspace, appspace, and accessing the app using the credentials given
+
+1.Vinaytech_2@vinaytechhouse.com user created an app [provided privilege to the entire organization team]
+2. Other team in the organization can use that
+	a) They can connect through mobile app
+	b) They can connect through web
+	etc.
+
+What is the URL used to create a Power BI account from EMAIL account?
+
+https://powerbi.microsoft.com/en-us/landing/signin/ 
+
+
+=====================================================================================
+WORKING ON DIFFERENT DATA FEEDS
+=======================================================================================
+POWER BI DESKTOP: REPORT CREATION (GET DATA, TRANSFORM DATA, MODEL DATA, VISUALIZE DATA, SECURE DATA)
+
+POWER BI SERVER / SERVICE: REPORTS STORE (CLOUD: SERVICE, SERVER: ON-PREMISE) AND MANAGE (SHARE, SUBSCRIBE ETC...)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+A) GETTING DATA INTO POWER BI FROM FLAT FILE
+
+	Get data--> Flat File --> Load--> Power BI Desktop [It will hold data and operate] :Power BI in-memory storage
+	
+	Note: Power BI Desktop will hold maximum 1 GB Data 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------	
+B) GETTING DATA INTO POWER BI FROM EXCEL
+
+	Get data--> Excel File --> Load--> Power BI Desktop [It will hold data and operate] :Power BI in-memory storage
+
+	Note: Power BI Desktop will hold maximum 1 GB Data
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+C) GETTING DATA INTO POWER BI FROM WEB
+
+	Get Data--> Web--> http://www.vinaytechhouse.com/register-today.html, choose Table0/ Table1
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------	
+D) GETTING DATA INTO POWER BI USING JSON FILE
+
+	Get Data--> JSON--> Convert to Table, Click on Expand, Click on Expand, now you will see the table
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+E) CREATE A TABLE DYNAMICALLY
+
+	Click on top table icon, enter column names and data, mention table name and click OK
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+E) GETTING DATA INTO POWER BI USING BLANK QUERY
+
+	Get Data--> Blank Query--> Go to expression area write the below and click save(tick mark), close and apply.
+	
+	=List.Numbers(300,100)
+	
+	 It will provide us the numbers starting from 300 to till 400.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+F) Getting Data From SQL Server Analysis Services
+
+Note: Go to the below link, down load SQL Server BI Software and SSMS software. Install it [follow the video]
+
+		http://www.vinaytechhouse.com/MSBI-Software-Link.html
+
+
+	Follow the video, restore Analysis Services Cube Database, Open Power BI Desktop--> Get Data,
+
+	Server Name: Analysis Services Server Name [specify yours]
+
+	Choose Connect Live
+
+	Click OK--> It will show you all cube databases, choose the restored database
+
+	Take visual and drag and drop columns.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+F)  GETTING DATA FROM SQL SERVER
+
+Note: Go to the below link, down load SQL Server BI Software and SSMS software. Install it [follow the video]
+
+		http://www.vinaytechhouse.com/MSBI-Software-Link.html
+
+
+	1. Open SSMS [SQL Server Management Studio]
+	2. Connect to Database Engine Service
+	3. Create Database, Schema, Table, View, Procedure, Function like below [follow the SQL file given to you]
+
+
+	Note: Watch video for practice. [ you will not find a crazy video like this in internet]
+-------------------------------------------------------------------------------------------------
+How many ways we can work on Tables / Functions / Views in Power BI Desktop?
+
+There are two ways
+
+a) Import / Direct Query:  Choosing table / view / function
+
+b) Import / Direct Query:   Advanced: Writing SQL Command / Query
+-------------------------------------------------------------------------------------------------
+How many ways we can work on Procedures in Power BI Desktop?
+
+Only one way
+
+Import / Direct Query:   Advanced: Writing SQL Command / Query
+
+----------------------------------------------------------------------------------------------
+
+How do we identify which data feed used to create a query?
+
+Go to Power Query Area, see the Mashup script in the Advanced Editor [ monitor  Source Step]
+
+---------------------------------------------------------------------------------------------------------------------
+How do yu identify which mode you are using?
+
+Go to Report View, Fields Menu, Down status bar will show the mode [Direct Query / Mixed Mode]
+
+Note: In case of import no information displayed
+---------------------------------------------------------------------------------------------------------------------
+What is mixed mode?
+
+Having import and direct query in the fields pane.
+
+---------------------------------------------------------------------------------------------------------------------
+How to switch Direct Query / Mixed Mode to Import Mode?
+
+Simply click Swict Storage Mode to Import in the status bar (at Report View)
+
+---------------------------------------------------------------------------------------------------------------------
+
+How to switch Import Mode to Direct Query?
+
+It require multiple steps [ read the PDF material]
+
+---------------------------------------------------------------------------------------------------------------------
+Which situation we go for Import and Direct Query / Connect Live?
+
+Less volumes of data handling and faster operations: Import Mode
+
+More volumes of data at relational databases [Oracle, SQL Server, Teradata etc.]: Direct Query
+
+More volumes of data at Cube Level [ SSAS [Tabular & Multi], SAP HANA, Other Cubes]: Connect Live
+---------------------------------------------------------------------------------------------------------------------
+
+Differences between Import, Direct Query and Connect Live?
+
+Refer to PDF [ around 12 differences explained]
+
+======================================================================================
+Home Work:
+
+Completing PDF1 and PDF3
+
+=====================================================================================
+
+
+
+
+
