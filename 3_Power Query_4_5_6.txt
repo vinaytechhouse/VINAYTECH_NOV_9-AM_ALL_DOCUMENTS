@@ -1,0 +1,634 @@
+PDF 4, 5, 6  [Refer to PDFs for detailed theory and images] 
+=========================================================================================
+Input Data : Data Feed for Power Query and rest all operations
+
+VINAYTECH_BUSINESS_PAYMENT_DETAILS_DATAMODEL_DATASET.xlsx
+
+Description:
+
+This has multiple worksheets and two types of worksheets
+
+a) Dimension worksheets
+
+	Textual information worksheets
+
+	Textual: The values which are not suitable for aggregate operations.
+
+	Ex:
+	DimStudent: Hold students information [when they enquire]
+	DimCourse: Hold couses details  [Power BI-N, Power BI-F etc...]
+	DimMode: Hold mode details [online, classroom, customized etc...]
+	DimLocation: Hold location details [Hyd, Mum, Che etc...]
+	DimUsers: Hold users information [ User entered the details]
+	etc...
+
+
+b) Fact worksheets
+
+	Textual and measurable information worksheets.
+
+	Textual: The values which are suitable for aggregate operations.
+
+	It only has Actual Fee, Discount Fee, Tax Amount values. These we use for our analysis.
+
+	Ex:
+
+	This table holds student, location, mode, date, etc... textual data [referemces of above tables] and measurable data.
+		
+	Studentid, CourseID, DateID, ModeID, Actual Fee, Discount Fee, Tax Amount etc.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+When do we transform data / edit query?
+
+Incase the given input data is not proper or need changes then we go for transform data / edit query.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Why Power BI Storing Data and other tools not storing data?
+
+Microsoft wants to provide a quick and faster decision solution, it happens when we keep data in our area and visualize / browse.
+[legacy systems create Data Mart and then visualize, Power BI Data Mart is Dataset with Data and Visualization]
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+How do you define Dataset in Power BI?
+
+Dataset may contain structure (metadata) or structure and Data 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+What type of data suitable for Power BI Modeling and Visualization?
+
+Column by column data
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+What if data is not column by column?
+
+Data Transformtion is required to make column by column data
+========================================================================================
+Power Query:[ Edit Query area / Extract Transform Area]    Supported Langages: Mashup, R, Python 
+========================================================================================
+a)This is an extraction and Trasnformation  area
+b) Maximum data transformations available
+c) Uses Mashup language for its operations
+d) Mashup language contains
+	Set of classes, classes contain methods / variables
+
+	List.Numbers(200,50) --starts with 200 and generate values till 250
+
+e) No need to learn mashup lang, but having little understanding is sufficient
+    That understading is how to call a method / variable, placing steps, able to read the script generated for each query
+
+f) For each query mashup generate a script
+
+	let
+		variable1 / step1=Source (...) ,  --extraction
+		variable2/step2=variable 1+ operations, --transformation
+
+		...
+	in
+		variable n (last step) --final transformation
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+What is the difference between Grid (Query) and List?
+
+List : Single column with set of values
+
+Query: Multiple columns with multiple rows
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Can we convert List in to Query?
+
+Yes, there is an option which will help youto convert to Table
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+How many ways we go to Power Query Area?
+
+a)During Import / Direct query level: Specifying direct Edit / Transform Data
+b)After import or Direct query: Query editor->Edit Query / Transform Data
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Power BI Transformations / Properties:
+
+How many important options or panes you find?
+
+a)Queries Pane : Queries properties  [ Left hand side]
+
+b)Individual Query Pane: Individual Query and Individual column properties [Middle]
+
+c)Query settings pane: Working with operations implemented [Right hand side]
+
+d) Individual Column Pane: Display column transformations / operations
+
+e) Multi column properties: Display multiple columns combine properties
+
+f) Filter settings Pane: Against to each column
+
+g) Menu ribbons [Home, View, PARAMETERS, Add Column, Transform, Help etc.]
+
+======================================================================================
+ 1st Set of Transformations: Queries Properties
+======================================================================================
+What is the difference between Copy, Duplicate and Reference?
+
+Copy is the legacy option to paste the object with all the steps it has already. Changes are indepedent from the main object.
+Dupliate is a mashup terminology and similar to paste of object with all steps it has already.Changes are indepedent from the main object.
+
+Reference will bring only source step from the object. So that it acts like pointer / addresse referece to the parent. It will show the changes
+of the main object because it is a reference.
+
+Ex:
+
+If One table has 4 steps, then
+
+Copy will get all the 4 steps
+Duplicate will also get all the 4 steps
+
+Reference will get only one step, i.e Source step
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Enable Load, Support Refresh
+
+	If you want an object with data and support loading, then enable it
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Create Groups
+
+	To logically seperate objects [Dimensions, Facts, Calculations etc...], then we for Groups.
+	This is close to Display folder in the Modeling and Analysis Services.
+
+	It will help us to recognize objects and work with them easily.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Create function
+
+	Functions are helpful to implement reusable functionality.
+	It contain set of statements and we can call it to perform calculations.
+
+	It uses Mashup language code.
+
+Enable Load	
+		a)It will be enabled at report view level
+		b)Displayed at Power BI Dataset level
+
+Include in Report Refresh	
+
+		If source changes it will participate in report refresh
+
+Duplicate	Create 
+		duplicate query with all steps
+		Source changes don’t affect here
+Reference	
+		Create reference to source and get only source step.
+		Source changes affect here
+Move to group	
+		Create groups for Queries, functions, parameters, lists etc…so that you can work with them easily
+Move up 
+		Moving up the Query / Folder
+Move down	
+
+		Moving down the Query / Folder
+Create Function	
+		Helps to reuse the function in multiple queries
+Advanced Editor	
+		Opens M-Script for the respective Query
+
+======================================================================================
+ 2nd Set of Transformationc: Query Properties
+======================================================================================
+a) Copy a query
+	
+		A Query copy to paste in excel or anywhere
+
+b) Use first row as header
+
+		Considering the row as header row which has column names
+
+c)Add Custom Column 
+
+		Adding column by entering value or selecting from existing values or by 
+
+d) Invoking functions 
+
+		The functions which are created will be called here
+
+e)Conditional column of single or multiple conditions [if or else if]
+
+f)Add an index column starting with 0 or 1 or required value
+
+g)Choose the columns require in the query for operations
+
+h)Keep the specified start row to end row [to KEEP / REMOVE]
+
+i)Remove duplicates and remove errors.
+
+j)Merge Queries : follow join protocol [ Inner, Outer and Anti]
+
+k)Append queries : follow set theory protocol [ Union ALL]
+
+
+======================================================================================
+3rd Set of Transformations: Individual Column Properties
+======================================================================================
+
+There are three major types of columns and their properties are different [ 80% same properties]
+
+a) Numeric column properties
+		
+		Numeric Data Transformations [ Math, Arith, Logical etc.]
+
+b) String Column Properties
+
+		Split
+
+		String transformations [Upper, Lower, Trim,  Clean]
+
+c) Date column properties
+
+		Date Transformations [ Date calculations, Time Calculations etc. ]
+
+======================================================================================
+4th Set of Transformations: Multiple Columns Properties
+======================================================================================
+a) If the columns are numeric 
+			
+		Merge Columns
+		Sum
+		Product
+
+b) If one of the column is string
+
+		Merge Columns
+
+======================================================================================
+5th Set of Transformations: Columns Filter Properties
+======================================================================================
+a) If the column is numeric 
+			
+		The filter conditional options are different
+
+b) If the column is string
+
+		The filter conditional options are different
+
+b) If the column is Date
+
+		The filter conditional options are different
+
+
+
+Common options for all types of columns:
+
+a) Sorting
+b)Clear sorting
+c) Filtering [ Basic] : Choose required values
+d) Clear Filter
+
+======================================================================================
+6th Set of Transformations: Menu options which are different from the above properties
+======================================================================================
+
+File Menu:
+
+	Save
+	Save As
+	Apply
+	Options and Settings etc...-->	In case you don't find any option in PBI Power Query, you can go to this and select the respective 				option.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Home Menu:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Close, Close & Apply, Apply  [ Apply : Saving changes made at Power Query Level]
+
+	New Sources: To Bring Data From Sources
+
+	Recent Sources: What all sources used in various Power BI Desktops in the Same Machine available here
+
+	Refresh:
+
+		Preview: The current browsed query refresh
+		Refresh ALL: ALL Queries Refresh
+
+	Data Source Settings:
+	==============
+		This helps
+		a) Pointing to a different environment area [ the objects structure should match, browse path may be different]
+		b) Permissions [ Permission on the specified path]
+	
+		
+		Global Permissions:
+		============
+			Common permission for multiple sources used in all applications in the current machine
+
+		Important Tip:
+		==========
+		When we work with files, take always network path than static path.
+
+		Static Path: 	C:\Data\ VINAYTECH_BUSINESS_DETAILS_DWH_DEV_DB.XLSX
+
+		Network Path: 	\\welcome\Data\ VINAYTECH_BUSINESS_DETAILS_DWH_DEV_DB.XLSX
+
+How to make a file path as Network Path?
+
+Go to the folder-->right click--> properties-->click Share-->specify everyone.
+After that go to folder-->right click-->properties-->copy the Network Path
+======================================================================================
+Parameters [ Refer to material for more faqs and graphical practical. 
+======================================================================================
+
+	a) It is a legacy mechanism to provide user interaction to the users.
+	b) Microsoft and many IT companies using same naming convention and process for user interaction.
+
+	c) Power BI level slicers and filters are more helpful than parameters, so parameters mechanism limited to Power BI Desktop only.
+
+	d) We have three types of parameters
+		
+		a) Any: User has to enter value
+		b) List: Static list of values in a dropdown list
+		c) Query: Dynamic list of values in a dropdown list [ based on the query it gets values]
+
+	e) Parameter usage is a two step process
+
+		1. Create parameter with datatype, user selection option
+
+		2. Use the parameter at Field filtering level
+
+
+	d) We dont' have Cascaded parameters in Power BI 
+
+		Cascaded parameters: One parameter output is input to another parameter.
+
+		Ex: Country--> State--> District--> Mandal etc...
+		     Year-->Quarter--> Month--> Week--> Day
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Transform Menu
+
+	a) Reverse rows 
+			Top rows down and down rows up
+
+	b) Transpose Rows
+			Rows into columns and columns into rows
+
+	c) Pivot 
+			1. Pivot means change.
+			2. Changing row values into column values.
+			3. Simply denormalized into normalized fashion.
+			4. We need one Pivot value column and one Pivot Column
+
+	d) UnPivot
+			
+			1. Changing column values into row values.
+			3. Simply normalized into denormalized fashion.
+			4. Choose the columns to unpivot, right click unpivot column
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Query Questions:
+
+Difference between Source and Navigation?
+Source displays the metadata of the source query.
+Navigation will show you the browsed data of the respective query.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+a) What is aggregate table?
+
+A table with aggregates, mostly by using Grouping or Pivoting we wil create in Power Query
+
+Ex: Create a table which contains location wise, mode wise sum of discount fee, avg of discount fee and count of employees.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+b) Can we add steps / variables in between?
+
+Yes, go to the step-->right click-->insert step after
+
+or 
+
+Go to advanced editor --> place the variables properly in the mash up area.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q: What is native query?
+
+The query which is generated by Power BI.
+Specially while working with databases, system writes a query for our operations, that is native query.
+
+Practice:
+
+1. Create a Power BI Desktop Report by getting tables from Database [ any database]
+2. Go to Power Query Area, implement few transformations
+3. Go to a step--> view native query.
+
+    Note: You can run the query in the respective database level to get desired result.
+
+Understanding:
+
+Navigation step from database table: Simple SELECT Query  --> SELECT COLS FROM <Tablename>
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How the native query is helpful.?
+
+a)It helps to see the query generated by the system 
+b) The Query can be optimized to get data from the source. So that performance will be improved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Which query id performance wise recommended? Native Query / Manually written query?
+
+Manually written optimized query is always recommended, because it runs faster at source and the burden source database server will take.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+When do we go for R and Python Transformations in Power Query?
+
+The existing transforms not suitable for your operations, then we go for R (statistical language) and Python( General Purpose Language)
+
+Ex: 
+You need more statistical transforms, then we should go for R lang.
+More visual and data science related operations, we go for Python lang.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What exactly the Diagnose options indicate in Power Query and How many options available?
+
+Diagnose option help us to see the statistics of the query when data refresh happening.
+The statistics of each step will be given in multiple fields.
+
+These statistics help us to take appropriate action on the steps.
+
+To start the diagnostics-->Clik Start Diagnostics
+To stop the diagnostics--> Click Stop Diagnostics
+
+
+When we start tracing diagnostics, there will be two files generated by the system.
+Click on each file and see the statistics.
+
+Note:
+
+For more understanding, refer to the diagnostic document in the Power BI Documentation.
+
+
+=========================================================================================
+Power BI Dataset Properties?
+=========================================================================================
+Here you will find two types of properties
+
+a) Query properties
+
+		General options [expand, collapse, hide, unhide etc...]
+		Incremental Refresh
+		Manage Aggregations
+		Mark As Date Table [only for date tables] 
+		New Measure / New Column / New Quick Measure [ from DAX]
+		
+b) Field properties
+
+		General options [expand, collapse, hide, unhide etc...]
+		
+		Grouping
+		Hierarchy creation
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is the pupose of marking a date table as type date table?
+
+If you specify a table as date type, then you apply date time calculations very quickly and easily.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Do we have any conditions to consider a table as a date type table?
+
+Yes, at least one date column without any date gaps.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Can you describe how do we create a date table using DAX?
+
+Test Date Table = CALENDAR(date(2017,01,01),date(2019,01,01))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is Refresh in Power BI?
+
+Source data changes taking into Power BI report is called refresh.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How many refresh mechanisms available?
+
+a) Manual / dynamic refresh ( just click refresh)  : In all accounts (pro and premium)
+
+b) Scheduled Refresh (specified time refresh)   : In all accounts  (pro and premium)
+
+	Full data refresh 
+
+c) Incremental refresh : In Premimum Account
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is incremental refresh? How do we implement?
+
+Getting required interval data (required days/ weeks/ months /years etc.) and loading to Power BI Dataset.
+This is helpful for incremental loading of data to dataset as part of historical data processing.
+
+There are two ways to implement
+
+a) By setting pre-defined options at the incremental refresh form.
+
+b) Creating start and end parameters and specifying them
+
+Note: Premium account is required to work on this.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Which account is required to work with incremental refresh?
+
+Premium account is required to work on this.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How many times we refresh data in Power BI?
+
+Manual refresh: No Limitation
+
+Scheduled Refresh: This is 8 times in Pro account and 48 times in premium account.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is manage aggregations?
+
+Manage aggregations use existing aggregations and display the data.
+
+So that visuals will not take much time to show.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How do we implement manage aggregation?
+
+a) Create an aggregate table [table having sum, avg, count, group etc.]
+	Note: Use direct query to bring tables. Create aggregate table on the query.
+
+b) Map this table to the visuals used table [ FactPayments]
+
+==============================================
+Field Additional Properties [Hierarchies and Groups]
+===============================================
+
+What is hierarchy?
+
+Hierarchy contain multiple levels and members.
+
+Ex: Country (level)--> State (level)-->District(Level) etc.
+
+     Year-->Semister-->Quarter-->Month-->Week-->Day etc.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How hierarchies are helpful?
+
+a)Hierarchies help us to see all levels of data at a time.
+
+b) To provide drill down and drill up analysis easily.
+
+Note: During Matrix and few other visuals you can see the usage of drill down and drill up
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is grouping?
+
+Categorizing data
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How many types of groups we have in Power BI?
+
+There are two types
+
+a) Logical group: Power BI Dataset [Power View Level]
+
+b) Physical group: Power Query Level [Ex: Aggregate table (location and institute wise sum of actual fee, discount fee and count of students) ]
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is grouping at Power BI View / Dataset level?
+
+It is logical grouping
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How many types of logical groups we have?
+
+Two types
+
+a) List group [ for all data types  Ex: Whole Number, Text, Date etc.]
+
+	List of values grouped [Manual list]
+
+b) Bin group  [Only for Numerics and Dates]
+
+	Based on size (bin size) or value (bin count) 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What are Bin Size and Bin Count?
+
+Bin Size helps to take groups based on the size difference (here number of groups will be decided by the system)
+Bin Count helps to see required number of groups (size will be decided by the system)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How many logical groups we can create at dataset level?
+
+ No Limit
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If we mention BinSize, then how many bins it will create?
+
+System decides based on data and creates
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If we mention BinCount, then what is the size it will take?
+
+System decides based on data and takes size
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is the difference between Unhide and View Hidden?
+
+Unhide: Will make the hidden as visible
+
+View hidden: Will show the hidden objects in greyed color
+
+
+
+
+
+
+
+
+
+

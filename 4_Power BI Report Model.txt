@@ -1,0 +1,98 @@
+After Extract and required transformation operations, we need to implement Data Modeling in Power BI.
+
+Step1 :  Read PDF2 given [ Data Model Fundamentals]
+	
+	Also watch the data modeling video.
+
+Step 2: 
+
+	Go to Power BI Desktop--> Get Data--> Vinaytech_Business_Details_DWH_Dev_DB.xlsx
+	
+	Crrate a model with the below operations
+
+	a) Establish One to Many (1:*) relationship between 
+
+		DimStudent --> FactPayments
+		DimLocation --> FactPayments
+		DimUsers --> FactPayments
+		DimCourseMode --> FactPayments
+		DimCourse --> FactPayments
+
+	b) Establish One to Many both direction (BiDirectional) relaitonship between
+
+		DimCourse <--> FactPayments
+
+	c) Establish One to Many multiple relationships like below [to create Role Playing Dimension]
+
+		DimDate (Date)---> FactPayments(Course_End_Dt)
+		DimDate (Date)---> FactPayments(Join_Dt)
+		DimDate (Date)---> FactPayments(Enquire_Dt)
+
+Step 3: Create folders and specify format options and visibility options
+
+		Actual_Fee	
+			 Format: Decimal
+			Visible: True
+			Display Folder: Business_Measures
+		Discount_Fee	
+			 Format: Decimal
+			Visible: True
+			Display Folder: Business_Measures
+		TaxAmount	
+			 Format: Decimal
+			Visible: True
+			Display Folder: Business_Measures
+
+
+		Course_End_DT:
+				
+			 Format: Date
+			Visible: True
+			Display Folder: Dimension References
+
+		Join_DT:
+				
+			 Format: Date
+			Visible: True
+			Display Folder: Dimension References
+
+		Enquiry_DT:
+				
+			 Format: Date
+			Visible: True
+			Display Folder: Dimension References
+
+		StudentID:
+				
+			 Format: Numeric
+			Visible: True
+			Display Folder: Dimension References
+
+		CourseID:
+			
+			 Format: Text
+			Visible: True
+			Display Folder: Dimension References
+
+		LocationID:
+			
+			 Format: Text
+			Visible: True
+			Display Folder: Dimension References
+
+		ModeID:
+			
+			 Format: Text
+			Visible: True
+			Display Folder: Dimension References
+
+		Date:
+			
+			 Format: Date
+			Visible: False****
+			Display Folder: Dimension References
+
+
+
+
+	
